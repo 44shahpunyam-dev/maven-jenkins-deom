@@ -6,9 +6,10 @@ pipeline {
     }
 
     stages {
+
         stage('Clone') {
             steps {
-                echo 'Code already present in workspace'
+                git 'https://github.com/44shahpunyam-dev/maven-jenkins-deom.git'
             }
         }
 
