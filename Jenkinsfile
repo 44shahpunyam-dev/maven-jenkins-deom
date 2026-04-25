@@ -5,13 +5,11 @@ pipeline {
         maven 'Maven 3'
     }
 
-    stages {
-
-        stage('Clone') {
-            steps {
-                git 'https://github.com/44shahpunyam-dev/maven-jenkins-deom.git'
-            }
-        }
+    stage('Clone') {
+    steps {
+        git branch: 'main', url: 'https://github.com/44shahpunyam-dev/maven-jenkins-deom.git'
+    }
+}
 
         stage('Build') {
             steps {
